@@ -31,6 +31,6 @@ Route::prefix('v1/')->namespace('api/v1/')->group(function () {
     Route::get('article-most-view', [ArticlesController::class, 'mostView']);
     Route::get('sitemap.xml', [SitemapController::class, 'index']);
     Route::get('sliders', [SlidersController::class, 'index']);
-    Route::get('sliders-create', [SlidersController::class, 'add']);
+    Route::post('sliders-create', [SlidersController::class, 'add']);
 
 });

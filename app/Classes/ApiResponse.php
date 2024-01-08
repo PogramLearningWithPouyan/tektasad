@@ -8,7 +8,6 @@ trait ApiResponse
 {
     public function successResponse($data, $message = '', $statusCode = 200): JsonResponse
     {
-
         return response()->json([
             'status' => $statusCode,
             'errors' => [],
