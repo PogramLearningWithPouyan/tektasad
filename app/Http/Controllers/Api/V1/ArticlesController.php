@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Classes\FileUpload;
+use App\Enum\FileCategory;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\V1\Articles\ArticlesCategoryRequest;
+use App\Http\Requests\ArticleAddRequest;
 use App\Http\Requests\V1\ArticlesIndexRequest;
-use App\Http\Resources\ArticleindexResource;
+use App\Http\Resources\ArticleResource;
 use App\Models\Article;
-use App\Models\ArticleCategory;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File as LaravelFile;
+use Illuminate\Support\Facades\Storage;
 
 class ArticlesController extends Controller
 {
@@ -17,8 +19,9 @@ class ArticlesController extends Controller
     {
         $articles = Article::where('is_show', true)->with(['category', 'thumbnail', 'seo', 'tags', 'author'])->latest()
             ->paginate($request->count);
+        $article= ArticleResource::collection($articles);
         return $this->successResponse([
-            'articles' => ArticleindexResource::collection($articles),
+            'articles' => $article,
             'total' => $articles->total(),
             'perPage' => $articles->perPage(),
             'currentPage' => $articles->currentPage(),
@@ -31,9 +34,9 @@ class ArticlesController extends Controller
         $article = Article::whereSlug($slug)->where('is_show', true)->where('category_id', '!=', 15)
             ->with(['category', 'thumbnail', 'seo', 'tags', 'author'])->first();
         if (!$article)
-            return $this->errorResponse(__('messages.field_not_find'), 404);
+            return $this->errorResponse('field_not_find', 404);
         $article->increment('view_count');
-        $data = new ArticleindexResource($article);
+        $data = new ArticleResource($article);
         return $this->successResponse($data, '');
     }
 
@@ -42,9 +45,9 @@ class ArticlesController extends Controller
         $article = Article::whereSlug($slug)->where('category_id', 15)
             ->with(['category', 'thumbnail', 'seo', 'tags', 'author'])->first();
         if (!$article)
-            return $this->errorResponse(__('messages.field_not_find'), 404);
+            return $this->errorResponse('field_not_find', 404);
         $article->increment('view_count');
-        $data = new ArticleindexResource($article);
+        $data = new ArticleResource($article);
         return $this->successResponse($data, '');
     }
 
@@ -52,7 +55,7 @@ class ArticlesController extends Controller
     {
         $articles = Article::where('is_future', 1)->where('is_show', true)->latest()
             ->paginate($request->count);
-        $data = ArticleindexResource::collection($articles);
+        $data = ArticleResource::collection($articles);
         return $this->successResponse($data, '');
     }
 
@@ -60,7 +63,37 @@ class ArticlesController extends Controller
     {
         $articles = Article::orderByDesc('view_count')->with(['category', 'thumbnail', 'seo', 'tags', 'author'])->where('is_show', true)
             ->paginate($request->count);
-        $data = ArticleindexResource::collection($articles);
+        $data = ArticleResource::collection($articles);
         return $this->successResponse($data, '');
+    }
+
+    public function add(ArticleAddRequest $request, FileUpload $fileUpload): JsonResponse
+    {
+        $imagePath = Storage::disk('public')->path($request->file);
+
+        $file = File::create([
+            'caption' => 'category image: ' . $request->title,
+            'path' => config('app.url') . '/storage/' . $request->file,
+            'extensions' => LaravelFile::mimeType($imagePath),
+            'hash' => Hash::make($imagePath),
+            'original_name' => $request->title,
+            'size' => LaravelFile::size($imagePath),
+        ]);
+        $files = $fileUpload->setKey('file')
+            ->setRequest($request)
+            ->setCaption('article')
+            ->setCategory(FileCategory::tickets)
+            ->save();
+        $file_id = $files->id;
+        $s=Article::create(["title" => $request->title,
+            'slug'=>$request->slug,
+            'excerpt'=>$request->excerpt,
+            'body'=>$request->body,
+            'is_show'=>$request->is_show,
+            "file_id" => $file_id,
+            'view_count'=>0,
+            'tag'=>$request->tag,
+        ]);
+        return $this->successResponse($s->id, 'Article created successfully');
     }
 }

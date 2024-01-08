@@ -123,7 +123,7 @@ class FileUpload
             'hash' => md5($this->path . $this->newName),
             'original_name' => $this->file->getClientOriginalName(),
             'size' => $this->file->getSize(),
-            'user_id' => Auth::user()->id,
+//            'user_id' => Auth::user()->id,
             'file_category_id' => $this->category
         ]);
     }

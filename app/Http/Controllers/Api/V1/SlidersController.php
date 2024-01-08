@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\Enum\FileCategory;
 use App\Classes\FileUpload;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SlidersRequest;
@@ -26,7 +27,7 @@ class SlidersController extends Controller
             ->setCategory(FileCategory::tickets)
             ->save();
         $file_id = $file->id;
-        $slider=Sliders::create(["title" => $request->title,
+        $slider=Sliders::create(["seo" => $request->seo,
             'is_show'=>$request->is_show,
             "file_id" => $file_id,
         ]);
