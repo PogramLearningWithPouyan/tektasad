@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SlidersRequest extends FormRequest
+class SlidersUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -17,15 +17,15 @@ class SlidersRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
         return [
-            'title' => 'required|string',
-            'file' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-            'is_show'=>'required|string',
-            'seo'=>'required|string'
+            'id'=>'required|integer',
+            'title' => 'nullable|string',
+            'is_show'=>'nullable|string',
+            'seo'=>'nullable|string'
         ];
     }
 }

@@ -32,11 +32,13 @@ Route::prefix('v1/')->namespace('api/v1/')->group(function () {
     Route::get('sitemap.xml', [SitemapController::class, 'index']);
     Route::get('sliders', [SlidersController::class, 'index']);
     Route::get('gallery', [GaleryController::class, 'index']);
-    Route::post('/login', [AuthController::class, 'login']);
     Route::post('article-create', [ArticlesController::class, 'add']);
     Route::post('gallery-create', [GaleryController::class, 'add']);
+    Route::post('sliders-update', [SlidersController::class, 'update']);
     Route::post('sliders-create', [SlidersController::class, 'add']);
-//    Route::middleware('auth.custom')->get('/api/protected', function () {
-//
-//    });
+    Route::post('gallery-update', [GaleryController::class, 'update']);
+    Route::post('gallery-delete', [GaleryController::class, 'delete_from']);
+    Route::post('sliders-delete', [SlidersController::class, 'delete_from']);
+
+
 });

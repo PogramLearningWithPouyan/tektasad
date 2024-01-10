@@ -14,12 +14,17 @@ class SlidersResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
+        if($this->is_show=='true'){
+            $is_show=true;
+        }else{
+            $is_show=false;
+        }
         return [
             'id' => $this->id,
             'title'=>$this->title,
-            'link'=>$this->link,
+            'seo'=>$this->seo,
             'path'=>$this->thumbnail->path,
-            'target'=>$this->target
+            'is_show'=>$is_show,
         ];
     }
 }

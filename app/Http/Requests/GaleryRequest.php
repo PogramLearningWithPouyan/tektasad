@@ -22,9 +22,11 @@ class GaleryRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'category'=>'required|string',
+            'title'=>'required|string',
             'seo' => 'nullable|string',
             'file' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-            'is_show'=>'required|integer'
+            'is_show'=>'required|string'
         ];
     }
 }

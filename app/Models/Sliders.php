@@ -13,7 +13,7 @@ class Sliders extends Model
     protected $fillable = [
         'id',
         'title',
-        'link',
+        'seo',
         'is_show',
         'file_id',
         'target'

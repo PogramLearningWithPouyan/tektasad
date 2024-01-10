@@ -14,7 +14,9 @@ class Galery extends Model
     protected $fillable = [
         'is_show',
         'file_id',
-        'seo'
+        'seo',
+        'category',
+        'title'
     ];
 
     public function thumbnail(): BelongsTo

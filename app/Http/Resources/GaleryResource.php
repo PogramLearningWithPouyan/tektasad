@@ -14,8 +14,17 @@ class GaleryResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
+        if($this->is_show=='true'){
+            $is_show=true;
+        }else{
+            $is_show=false;
+        }
         return [
-        'image' => ['original' => $this->thumbnail->path, 'caption' => $this->thumbnail->caption],
+            'id' => $this->id,
+            'category'=>$this->category,
+            'original' => $this->thumbnail->path,
+            'title' => $this->title,
+            'is_show'=>$is_show
         ];
     }
 }
