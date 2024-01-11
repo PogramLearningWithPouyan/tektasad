@@ -96,4 +96,13 @@ class ArticlesController extends Controller
         ]);
         return $this->successResponse($s->id, 'Article created successfully');
     }
+    public function fileUpdload(ArticlesFileRequest $request, FileUpload $fileUpload): JsonResponse
+    {
+        $files = $fileUpload->setKey('file')
+            ->setRequest($request)
+            ->setCaption('article')
+            ->setCategory(FileCategory::tickets)
+            ->save();
+        return $this->successResponse($files, '');
+    }
 }
