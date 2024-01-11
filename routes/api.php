@@ -39,6 +39,6 @@ Route::prefix('v1/')->namespace('api/v1/')->group(function () {
     Route::post('gallery-update', [GaleryController::class, 'update']);
     Route::post('gallery-delete', [GaleryController::class, 'delete_from']);
     Route::post('sliders-delete', [SlidersController::class, 'delete_from']);
-
+    Route::post('article-file', [ArticlesController::class, 'fileUpdload']);
 
 });
