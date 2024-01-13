@@ -6,6 +6,7 @@ use App\Classes\FileUpload;
 use App\Enum\FileCategory;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleAddRequest;
+use App\Http\Requests\ArticlesFileRequest;
 use App\Http\Requests\V1\ArticlesIndexRequest;
 use App\Http\Resources\ArticleResource;
 use App\Models\Article;
@@ -69,16 +70,6 @@ class ArticlesController extends Controller
 
     public function add(ArticleAddRequest $request, FileUpload $fileUpload): JsonResponse
     {
-//        $imagePath = Storage::disk('public')->path($request->file);
-
-        $file = File::create([
-            'caption' => 'category image: ' . $request->title,
-            'path' => config('app.url') . '/storage/' . $request->file,
-            'extensions' => LaravelFile::mimeType($imagePath),
-            'hash' => Hash::make($imagePath),
-            'original_name' => $request->title,
-            'size' => LaravelFile::size($imagePath),
-        ]);
         $files = $fileUpload->setKey('file')
             ->setRequest($request)
             ->setCaption('article')
@@ -104,6 +95,7 @@ class ArticlesController extends Controller
             ->setCategory(FileCategory::tickets)
             ->save();
         $file=$files->path;
-        return $this->successResponse($file, '');
+        return response()->json(['location'=>$file]);
+//        return $this->successResponse($file, '');
     }
 }
