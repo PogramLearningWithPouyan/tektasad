@@ -71,14 +71,14 @@ class ArticlesController extends Controller
     {
 //        $imagePath = Storage::disk('public')->path($request->file);
 
-//        $file = File::create([
-//            'caption' => 'category image: ' . $request->title,
-//            'path' => config('app.url') . '/storage/' . $request->file,
-//            'extensions' => LaravelFile::mimeType($imagePath),
-//            'hash' => Hash::make($imagePath),
-//            'original_name' => $request->title,
-//            'size' => LaravelFile::size($imagePath),
-//        ]);
+        $file = File::create([
+            'caption' => 'category image: ' . $request->title,
+            'path' => config('app.url') . '/storage/' . $request->file,
+            'extensions' => LaravelFile::mimeType($imagePath),
+            'hash' => Hash::make($imagePath),
+            'original_name' => $request->title,
+            'size' => LaravelFile::size($imagePath),
+        ]);
         $files = $fileUpload->setKey('file')
             ->setRequest($request)
             ->setCaption('article')

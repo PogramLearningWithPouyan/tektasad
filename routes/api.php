@@ -41,5 +41,4 @@ Route::prefix('v1/')->namespace('api/v1/')->group(function () {
     Route::post('sliders-delete', [SlidersController::class, 'delete_from']);
     Route::post('article-file', [ArticlesController::class, 'fileUpdload']);
 
-
 });
