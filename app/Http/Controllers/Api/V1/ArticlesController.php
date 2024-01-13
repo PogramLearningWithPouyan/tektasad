@@ -69,16 +69,16 @@ class ArticlesController extends Controller
 
     public function add(ArticleAddRequest $request, FileUpload $fileUpload): JsonResponse
     {
-        $imagePath = Storage::disk('public')->path($request->file);
+//        $imagePath = Storage::disk('public')->path($request->file);
 
-        $file = File::create([
-            'caption' => 'category image: ' . $request->title,
-            'path' => config('app.url') . '/storage/' . $request->file,
-            'extensions' => LaravelFile::mimeType($imagePath),
-            'hash' => Hash::make($imagePath),
-            'original_name' => $request->title,
-            'size' => LaravelFile::size($imagePath),
-        ]);
+//        $file = File::create([
+//            'caption' => 'category image: ' . $request->title,
+//            'path' => config('app.url') . '/storage/' . $request->file,
+//            'extensions' => LaravelFile::mimeType($imagePath),
+//            'hash' => Hash::make($imagePath),
+//            'original_name' => $request->title,
+//            'size' => LaravelFile::size($imagePath),
+//        ]);
         $files = $fileUpload->setKey('file')
             ->setRequest($request)
             ->setCaption('article')
@@ -95,5 +95,15 @@ class ArticlesController extends Controller
             'tag'=>$request->tag,
         ]);
         return $this->successResponse($s->id, 'Article created successfully');
+    }
+    public function fileUpdload(ArticlesFileRequest $request, FileUpload $fileUpload): JsonResponse
+    {
+        $files = $fileUpload->setKey('file')
+            ->setRequest($request)
+            ->setCaption('article')
+            ->setCategory(FileCategory::tickets)
+            ->save();
+        $file=$files->path;
+        return $this->successResponse($file, '');
     }
 }
