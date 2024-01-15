@@ -23,6 +23,7 @@ class ArticlesIndexRequest extends FormRequest
     {
         return [
             'count' => 'required|integer',
+            'category'=>'required|string'
         ];
     }
 }

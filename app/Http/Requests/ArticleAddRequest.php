@@ -22,13 +22,15 @@ class ArticleAddRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'slug' => 'nullable|string',
-            'body' => 'nullable|string',
-            'title' => 'nullable|string',
-            'excerpt' => 'nullable|string',
-            'tag' => 'nullable|string',
+            'slug' => 'required|string',
+            'body' => 'required|string',
+            'title' => 'required|string',
+            'excerpt' => 'required|string',
+            'category' => 'required|string',
             'file' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-            'is_show'=>'required|integer'
+            'is_show'=>'required|string',
+            'keyword'=>'nullable|string',
+            'description' => 'nullable|string',
         ];
     }
 }

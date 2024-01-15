@@ -13,7 +13,6 @@ class Article extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'category_id',
         'title',
         'slug',
         'excerpt',
@@ -22,32 +21,15 @@ class Article extends Model
         'is_show',
         'file_id',
         'view_count',
-        'is_future'
+        'is_future',
+        'description',
+        'category',
+        'keyword'
     ];
-
-    public function category(): BelongsTo
-    {
-        return $this->belongsTo(ArticleCategory::class, 'category_id', 'id');
-    }
-
-    public function author(): BelongsTo
-    {
-        return $this->belongsTo(User::class, 'created_by', 'id');
-    }
 
     public function thumbnail(): BelongsTo
     {
         return $this->belongsTo(File::class, 'file_id');
-    }
-
-    public function seo(): MorphOne
-    {
-        return $this->morphOne(Seo::class, 'seoable');
-    }
-
-    public function tags(): BelongsToMany
-    {
-        return $this->belongsToMany(Tag::class, 'article_tag');
     }
 
 }
