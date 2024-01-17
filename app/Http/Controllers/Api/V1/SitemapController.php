@@ -15,18 +15,128 @@ class SitemapController extends Controller
         $count=0;
         $time=Carbon::now()->format('Y-m-d');
         $data=[];
-        $data[$count]['url']="https://charsooq.com";
+        $data[$count]['url']="http://ariyarestoran.com/en";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=1;
         $count+=1;
-        $data[$count]['url']="https://charsooq.com/calculator";
+
+        $data[$count]['url']="http://ariyarestoran.com/tr";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=1;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/fa";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=1;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/ar";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=1;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/en/about-us";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
-        $articles = Article::select('slug','category_id')->with(['category'])->get();
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/tr/about-us";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/fa/about-us";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/ar/about-us";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/en/menu";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/tr/menu";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/fa/menu";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/ar/menu";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/en/gallery";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/tr/gallery";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/fa/gallery";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/ar/gallery";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/en/contact-us";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/tr/contact-us";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/fa/contact-us";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+        $count+=1;
+
+        $data[$count]['url']="http://ariyarestoran.com/ar/contact-us";
+        $data[$count]['lastModified']=$time;
+        $data[$count]['changeFrequency']="always";
+        $data[$count]['priority']=0.9;
+
+        $articles = Article::select('slug','category')->get();
         foreach ($articles as $article){
-            $data[$count]['url']="https://charsooq.com/articles/{$article->slug}";
+            $data[$count]['url']="http://ariyarestoran.com/{$article->category}/articles/{$article->slug}";
             $data[$count]['lastModified']=$time;
             $data[$count]['changeFrequency']="always";
             $data[$count]['priority']=0.9;
@@ -37,16 +147,38 @@ class SitemapController extends Controller
     public function robot(): JsonResponse
     {
         $data['rules']['userAgent']="*";
-        $data['rules']['allow']= ["/",
-            "/about-us",
-            "/articles",
-            "/articles/*",
-            "/contact-us"];
-        $data['rules']['disallow']= ["/dashboard",
-            "/dashboard/*",
+        $data['rules']['allow']= ["/en",
+            "/tr",
+            "/fa",
+            "/ar",
+            "/en/about-us",
+            "/tr/about-us",
+            "/fa/about-us",
+            "/ar/about-us",
+            "/en/menu",
+            "/tr/menu",
+            "/fa/menu",
+            "/ar/menu",
+            "/en/gallery",
+            "/tr/gallery",
+            "/fa/gallery",
+            "/ar/gallery",
+            "/en/articles",
+            "/tr/articles",
+            "/fa/articles",
+            "/ar/articles",
+            "/en/articles/*",
+            "/tr/articles/*",
+            "/fa/articles/*",
+            "/ar/articles/*",
+            "/en/contact-us",
+            "/tr/contact-us",
+            "/fa/contact-us",
+            "/ar/contact-us"];
+        $data['rules']['disallow']= [
             "/gp/*",
             "/_next/"];
-        $data['sitemap']='https://charsooq.com/sitemap.xml';
+        $data['sitemap']="http://ariyarestoran.com/sitemap.xml";
         return $this->successResponse($data, '');
     }
 }

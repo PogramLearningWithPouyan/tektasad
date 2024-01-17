@@ -4,6 +4,7 @@
 use App\Http\Controllers\Api\V1\ArticlesController;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\GaleryController;
+use App\Http\Controllers\Api\V1\MenuController;
 use App\Http\Controllers\Api\V1\SitemapController;
 use App\Http\Controllers\Api\V1\SlidersController;
 use Illuminate\Http\Request;
@@ -32,10 +33,11 @@ Route::prefix('v1/')->namespace('api/v1/')->group(function () {
     Route::get('article-old-show/{slug}', [ArticlesController::class, 'showOld']);
     Route::get('article-future', [ArticlesController::class, 'future']);
     Route::get('article-most-view', [ArticlesController::class, 'mostView']);
-    Route::get('sitemap.xml', [SitemapController::class, 'index']);
+    Route::get('sitemap', [SitemapController::class, 'index']);
+    Route::get('robot', [SitemapController::class, 'robot']);
     Route::get('sliders', [SlidersController::class, 'index']);
     Route::get('gallery', [GaleryController::class, 'index']);
-
+    Route::get('menu', [MenuController::class, 'index']);
     Route::post('/login', [AuthController::class, 'login']);
     Route::post('/oauth/token', '\Laravel\Passport\Http\Controllers\AccessTokenController@issueToken');
 
