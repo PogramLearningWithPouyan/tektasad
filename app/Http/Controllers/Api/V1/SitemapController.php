@@ -15,128 +15,128 @@ class SitemapController extends Controller
         $count=0;
         $time=Carbon::now()->format('Y-m-d');
         $data=[];
-        $data[$count]['url']="http://ariyarestoran.com/en";
+        $data[$count]['url']="https://ariyarestoran.com/en";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=1;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/tr";
+        $data[$count]['url']="https://ariyarestoran.com/tr";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=1;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/fa";
+        $data[$count]['url']="https://ariyarestoran.com/fa";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=1;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/ar";
+        $data[$count]['url']="https://ariyarestoran.com/ar";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=1;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/en/about-us";
+        $data[$count]['url']="https://ariyarestoran.com/en/about-us";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/tr/about-us";
+        $data[$count]['url']="https://ariyarestoran.com/tr/about-us";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/fa/about-us";
+        $data[$count]['url']="https://ariyarestoran.com/fa/about-us";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/ar/about-us";
+        $data[$count]['url']="https://ariyarestoran.com/ar/about-us";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/en/menu";
+        $data[$count]['url']="https://ariyarestoran.com/en/menu";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/tr/menu";
+        $data[$count]['url']="https://ariyarestoran.com/tr/menu";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/fa/menu";
+        $data[$count]['url']="https://ariyarestoran.com/fa/menu";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/ar/menu";
+        $data[$count]['url']="https://ariyarestoran.com/ar/menu";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/en/gallery";
+        $data[$count]['url']="https://ariyarestoran.com/en/gallery";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/tr/gallery";
+        $data[$count]['url']="https://ariyarestoran.com/tr/gallery";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/fa/gallery";
+        $data[$count]['url']="https://ariyarestoran.com/fa/gallery";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/ar/gallery";
+        $data[$count]['url']="https://ariyarestoran.com/ar/gallery";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/en/contact-us";
+        $data[$count]['url']="https://ariyarestoran.com/en/contact-us";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/tr/contact-us";
+        $data[$count]['url']="https://ariyarestoran.com/tr/contact-us";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/fa/contact-us";
+        $data[$count]['url']="https://ariyarestoran.com/fa/contact-us";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
         $count+=1;
 
-        $data[$count]['url']="http://ariyarestoran.com/ar/contact-us";
+        $data[$count]['url']="https://ariyarestoran.com/ar/contact-us";
         $data[$count]['lastModified']=$time;
         $data[$count]['changeFrequency']="always";
         $data[$count]['priority']=0.9;
 
         $articles = Article::select('slug','category')->get();
         foreach ($articles as $article){
-            $data[$count]['url']="http://ariyarestoran.com/{$article->category}/articles/{$article->slug}";
+            $data[$count]['url']="https://ariyarestoran.com/{$article->category}/articles/{$article->slug}";
             $data[$count]['lastModified']=$time;
             $data[$count]['changeFrequency']="always";
             $data[$count]['priority']=0.9;
@@ -178,7 +178,7 @@ class SitemapController extends Controller
         $data['rules']['disallow']= [
             "/gp/*",
             "/_next/"];
-        $data['sitemap']="http://ariyarestoran.com/sitemap.xml";
+        $data['sitemap']="https://ariyarestoran.com/sitemap.xml";
         return $this->successResponse($data, '');
     }
 }

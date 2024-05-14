@@ -25,7 +25,8 @@ class AuthController extends Controller
 //        if ($username=='ariyaserver' and $password=='Ariya1234ariya@$'){
 //
 //        }
-        $response = Http::post('localhost:88/api/v1/oauth/token', [
+
+        $response = Http::post('https://app.ariyarestoran.com/api/v1/oauth/token', [
             'grant_type' => 'password',
             'client_id' => '2',
             'client_secret' => 'B5hoMyVuhC5IkNv5l8phtiGbYASD5dROW9meiJvf',

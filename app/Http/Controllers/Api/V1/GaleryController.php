@@ -17,7 +17,7 @@ class GaleryController extends Controller
 {
     public function index(): JsonResponse
     {
-        $galery = Galery::with(['thumbnail'])->whereNull('deleted_at')->get();
+        $galery = Galery::with(['thumbnail'])->whereNull('deleted_at')->orderBy('id', 'desc')->get();
         $galeres= GaleryResource::collection($galery);
         return $this->successResponse($galeres, '');
     }
