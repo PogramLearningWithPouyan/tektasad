@@ -30,7 +30,7 @@ class MenuController extends Controller
                 "category" => "سلطة"
             ],
             "tr" => [
-                "title" => "Seasonal Salad",
+                "title" => "Mevsim Salatası",
                 "desc" => "Marul, domates, salatalık, havuç, kırmızı lahana (Zeytinyağı, limon, nar sosu)",
                 "img" => "https://app.ariyarestoran.com/storage//tickets/1715685632-salad-fasl.png",
                 "category" => "Salatalar"
@@ -55,8 +55,8 @@ class MenuController extends Controller
                     "category" => "سلطة"
                 ],
                 "tr" => [
-                    "title" => "Garden Salad",
-                    "desc" => "Beyaz peynir, taze brokoli, marul, domates, salatalık (Zeytinyağı, limon, nar sosu)",
+                    "title" => "Bahçe salatası",
+                    "desc" => "Beyaz peynir, taze brokoli, marul, domates, salatalık  (Zeytinyağı, limon, nar sosu)",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715686177-salad-bakhche.png",
                     "category" => "Salatalar"
                 ]
@@ -81,7 +81,7 @@ class MenuController extends Controller
                     "category" => "سلطة"
                 ],
                 "tr" => [
-                    "title" => "Avocado Salad",
+                    "title" => "Avocado Salatası",
                     "desc" => "Avokado, ızgara tavuk göğsü, ceviz, marul, domates, salatalık, havuç, kırmızı lahana (Zeytinyağı, limon, nar sosu)",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715686266-salad-avacado.png",
                     "category" => "Salatalar"
@@ -107,8 +107,8 @@ class MenuController extends Controller
                     "category" => "سلطة"
                 ],
                 "tr" => [
-                    "title" => "Fruit Salad",
-                    "desc" => "En iyi meyvelerin bulunduğu tabak",
+                    "title" => "Meyve Salatası",
+                    "desc" => "Çeşitli mevsim meyveleri",
                     "img" => "",
                     "category" => "Salatalar"
                 ]
@@ -159,7 +159,7 @@ class MenuController extends Controller
                     "category" => "مقبلات"
                 ],
                 "tr" => [
-                    "title" => "Spinach Borani",
+                    "title" => "Ispanaklı Yoğurt",
                     "desc" => "Yoğurt, ıspanak, sarımsak",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715688435-mast-ispnaj.png",
                     "category" => "Mezeler"
@@ -185,7 +185,7 @@ class MenuController extends Controller
                     "category" => "مقبلات"
                 ],
                 "tr" => [
-                    "title" => "Eggplant Borani",
+                    "title" => " Köz Patlıcanlı Yoğurt",
                     "desc" => "Yoğurt, patlıcan, sarımsak, nane",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715688490-mast-bademjan.png",
                     "category" => "Mezeler"
@@ -211,8 +211,8 @@ class MenuController extends Controller
                     "category" => "مقبلات"
                 ],
                 "tr" => [
-                    "title" => "Yogurt and Cucumber",
-                    "desc" => "Yoğurt, doğranmış salatalık, nane",
+                    "title" => "Cacık",
+                    "desc" => "Yoğurt, doğranmış salatalık, nane,ceviz",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715686497-mast-khiyar.png",
                     "category" => "Mezeler"
                 ]
@@ -237,7 +237,7 @@ class MenuController extends Controller
                     "category" => "مقبلات"
                 ],
                 "tr" => [
-                    "title" => "sir turshi",
+                    "title" => "Sarımsak Turşusu",
                     "desc" => "Sarımsak dişleri, sirke",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715686540-sir-torshi.png",
                     "category" => "Ara Sıcaklar"
@@ -289,8 +289,8 @@ class MenuController extends Controller
                     "category" => "مقبلات"
                 ],
                 "tr" => [
-                    "title" => "Zeytun parvarde",
-                    "desc" => "Zeytin, kişniş, ceviz, sarımsak, nar pekmezi",
+                    "title" => "Zeytin Salatası",
+                    "desc" => "Zeytin, kişniş, ceviz, sarımsak, nar ekşisi",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715686611-zeyton.png",
                     "category" => "Ara Sıcaklar"
                 ]
@@ -315,8 +315,8 @@ class MenuController extends Controller
                     "category" => "شوربات"
                 ],
                 "tr" => [
-                    "title" => "Barley Soup",
-                    "desc" => "Arpa şehriye, havuç, taze krema",
+                    "title" => "Yulaf Çorbası",
+                    "desc" => "Soyulmuş yulaf, havuç, taze krema,maydanoz",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715686656-soup-jo.png",
                     "category" => "Çorbalar"
                 ]
@@ -341,7 +341,7 @@ class MenuController extends Controller
                     "category" => "شوربات"
                 ],
                 "tr" => [
-                    "title" => "Lentil Soup",
+                    "title" => "Mercimek Çorbası",
                     "desc" => "Mercimek, kabak, patates, havuç, soğan",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715686703-soup-adas.png",
                     "category" => "Çorbalar"
@@ -367,8 +367,8 @@ class MenuController extends Controller
                     "category" => "أطباق الأرز"
                 ],
                 "tr" => [
-                    "title" => "Saffron Rice",
-                    "desc" => "260g premium İran pirinci, Qaenat safran, 10g paketlenmiş tereyağı",
+                    "title" => "Safranlı Pilav",
+                    "desc" => "260g İran A sınıfı pirinç, Qaenat safran, 10g paketlenmiş tereyağı",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715688545-berenj-zaferani.png",
                     "category" => "Pilavlar"
                 ]
@@ -394,8 +394,8 @@ class MenuController extends Controller
                     "category" => "أطباق الأرز"
                 ],
                 "tr" => [
-                    "title" => "Zereshk Polo",
-                    "desc" => "Premium Hashemi pirinci, zereshk, doğranmış badem, doğranmış antep fıstığı, Qaenat safran",
+                    "title" => "Kuş Üzümlü Pilav",
+                    "desc" => "Hashemi A sınıfı pirinç, kuş üzümü, doğranmış badem, doğranmış İran Fıstığı, Qaenat safran",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715686780-zereshkpolo.png",
                     "category" => "Pilavlar"
                 ]
@@ -421,8 +421,8 @@ class MenuController extends Controller
                     "category" => "أطباق الأرز"
                 ],
                 "tr" => [
-                    "title" => "Baghali Polo",
-                    "desc" => "Qaenat premium Hashemi pirinci, bakla, dereotu, Qaenat safran",
+                    "title" => "Bakla Pilavı",
+                    "desc" => "Qaenat Hashemi A sınıfı pirinç, bakla, dereotu, safran",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715686854-baghali-polo.png",
                     "category" => "Pilavlar"
                 ]
@@ -447,8 +447,8 @@ class MenuController extends Controller
                     "category" => "أطباق الأرز"
                 ],
                 "tr" => [
-                    "title" => "Sabzi Polo",
-                    "desc" => "Premium Hashemi pirinci, kişniş, dereotu, doğranmış pırasa, Qaenat safran",
+                    "title" => "Sebzeli Pilav",
+                    "desc" => "Hashemi A sınıfı pirinç, maydanoz, dereotu, pırasa, ve Qaenat safran",
                     "img" => "",
                     "category" => "Pilavlar"
                 ]
@@ -473,8 +473,8 @@ class MenuController extends Controller
                     "category" => "الحساء"
                 ],
                 "tr" => [
-                    "title" => "Gheimeh stew",
-                    "desc" => "125g taze kuzu budu, baklagil, kızarmış patates, kurutulmuş limon, domates salçası",
+                    "title" => "Gheimeh",
+                    "desc" => "125g taze kuzu but eti, İran lapası, kızarmış patates veya kızarmış patlıcan, kurutulmuş limon, domates salçası,soğan",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715686953-gheyme.png",
                     "category" => "Güveçler"
                 ]
@@ -499,8 +499,8 @@ class MenuController extends Controller
                     "category" => "الحساء"
                 ],
                 "tr" => [
-                    "title" => "Fesenjan Stew",
-                    "desc" => "200g kemiksiz tavuk göğsü, çekilmiş ceviz, nar pekmezi",
+                    "title" => "Fesenjan",
+                    "desc" => "200g kemiksiz tavuk göğsü, ceviz, nar salçası,soğan",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715686979-fesenjan.png",
                     "category" => "Güveçler"
                 ]
@@ -525,8 +525,8 @@ class MenuController extends Controller
                     "category" => "الحساء"
                 ],
                 "tr" => [
-                    "title" => "karafs Stew",
-                    "desc" => "125g taze kuzu budu, kereviz",
+                    "title" => "Karafs",
+                    "desc" => "125g taze kuzu but eti, kereviz",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687009-karafs.png",
                     "category" => "Güveçler"
                 ]
@@ -551,8 +551,8 @@ class MenuController extends Controller
                     "category" => "الحساء"
                 ],
                 "tr" => [
-                    "title" => "Ghormeh Sabzi Stew",
-                    "desc" => "120g taze kuzu budu, kırmızı fasulye, maydanoz, çemen otu, kurutulmuş limon",
+                    "title" => "Ghormeh Sabzi",
+                    "desc" => "120g taze kuzu but eti, kırmızı fasulye, pırasa, maydanoz, kurutulmuş limon",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687045-ghorme.png",
                     "category" => "Güveçler"
                 ]
@@ -578,8 +578,8 @@ class MenuController extends Controller
                     "category" => "الأطباق الرئيسية"
                 ],
                 "tr" => [
-                    "title" => "gardan",
-                    "desc" => "750g taze kuzu boyun",
+                    "title" => "Kuzu Gerdan",
+                    "desc" => "750g taze kuzu gerdan eti",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687077-gardan.png",
                     "category" => "Ana Yemekler"
                 ]
@@ -606,7 +606,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Mahiche",
-                    "desc" => "500g taze kuzu dil",
+                    "desc" => "500g taze kuzu incik",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687122-mahiche.png",
                     "category" => "Ana Yemekler"
                 ]
@@ -633,7 +633,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Morg Zereshk poloyi",
-                    "desc" => "350g tavuk göğsü veya uyluk",
+                    "desc" => "350g tavuk göğsü veya Tavuk butu",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687200-morg-zereshk-polo.png",
                     "category" => "Ana Yemekler"
                 ]
@@ -659,7 +659,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Kashk Bademjan",
-                    "desc" => "Izgara patlıcan, kashk (süzme yoğurt), soğan, kuru nane.",
+                    "desc" => "Izgara patlıcan, kashk, soğan ve acı nane,ceviz,soğan",
                     "img" => "",
                     "category" => "Ara Sıcaklar"
                 ]
@@ -685,7 +685,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Mirza Ghasemi",
-                    "desc" => "Izgara patlıcan, domates, yumurta, soğan, sarımsak.",
+                    "desc" => "Izgara patlıcan, domates, yumurta, soğan, sarımsak,ceviz",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687315-mirzaghasemi.png",
                     "category" => "Ara Sıcaklar"
                 ]
@@ -711,7 +711,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Ash Reshteh",
-                    "desc" => "Reshteh (erişte), beyaz fasulye, nohut, mercimek, otlar, maydanoz, çemen otu.",
+                    "desc" => "Makarna, beyaz fasulye, nohut, mercimek, tere, maydanoz, kişniş,kesh",
                     "img" => "",
                     "category" => "Ara Sıcaklar"
                 ]
@@ -736,8 +736,8 @@ class MenuController extends Controller
                     "category" => "المقبلات"
                 ],
                 "tr" => [
-                    "title" => "Shole Zard Dessert",
-                    "desc" => "Safranlı ve Gül Suyu ile Pirinç Pudingi",
+                    "title" => "Shole Zard Tatlısı",
+                    "desc" => "Safran ve gül suyu ile pirinç pudingi,şeker",
                     "img" => "",
                     "category" => "Ara Sıcaklar"
                 ]
@@ -762,8 +762,8 @@ class MenuController extends Controller
                     "category" => "أطباق السمك"
                 ],
                 "tr" => [
-                    "title" => "Trout",
-                    "desc" => "700 ila 850 gram ağırlığında taze yakalanan gökkuşağı alabalığı",
+                    "title" => "Alabalık",
+                    "desc" => "700-850g Taze Alabalığı",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687395-mahi-ghezel.png",
                     "category" => "Balık Yemekleri"
                 ]
@@ -789,8 +789,8 @@ class MenuController extends Controller
                     "category" => "أطباق السمك"
                 ],
                 "tr" => [
-                    "title" => "Lurk Fish",
-                    "desc" => "Günlük olarak yakalanan 600 ila 650 gram ağırlığındaki lurk balığı",
+                    "title" => "Levrek",
+                    "desc" => "600-650g Taze Levrek balığı",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687428-mahi-levrek.png",
                     "category" => "Balık Yemekleri"
                 ]
@@ -817,7 +817,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Kabab Koobideh",
-                    "desc" => "Taze kuzu omuz ve kuzu yan karışımı",
+                    "desc" => "Kuzu kol ve döş( Kıyma)",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687567-kabab-koobide.png",
                     "category" => "Kebaplar"
                 ]
@@ -844,7 +844,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Sultani",
-                    "desc" => "Hazır kebap bir şiş ve 240g kuzu filetosu",
+                    "desc" => "Kabab Koobideh ve 240g kuzu bonfile",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687630-kabab-soltani.png",
                     "category" => "Kebaplar"
                 ]
@@ -871,7 +871,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Kebab Koobideh negini",
-                    "desc" => "300g kuzu eti, 60g tavuk göğsü",
+                    "desc" => "300g kuzu kıyma, 60g tavuk göğsü",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687695-kabab-negini.png",
                     "category" => "Kebaplar"
                 ]
@@ -898,7 +898,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Jooje Kebab bi Ostokhan",
-                    "desc" => "350 gram kemiksiz tavuk göğsü",
+                    "desc" => "Kemiksiz Özel soslu tavuk kebab (350g)",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687757-kabab-joje-bi-ostkhan.png",
                     "category" => "Şişler"
                 ]
@@ -925,7 +925,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Jooje Kebab ba Ostokhan",
-                    "desc" => "550 gram kemikli tavuk but ve göğüs",
+                    "desc" => "Kemikli özel soslu tavuk kebab (500g)",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687822-kabab-joje-ba-ostkhan.png",
                     "category" => "Şişler"
                 ]
@@ -950,8 +950,8 @@ class MenuController extends Controller
                     "category" => "كباب"
                 ],
                 "tr" => [
-                    "title" => "Lari  Kebab",
-                    "desc" => "350 gram kemiksiz tavuk but",
+                    "title" => "Lari Kebab",
+                    "desc" => "Kemiksiz tavuk but  (350g)",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687873-kabab-lari.png",
                     "category" => "Şişler"
                 ]
@@ -978,7 +978,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Aria Special Kebab",
-                    "desc" => "300 gram kuzu bonfile",
+                    "desc" => "300g kuzu bonfile",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715687990-kabab-ariya-ozal.png",
                     "category" => "Şişler"
                 ]
@@ -1004,8 +1004,8 @@ class MenuController extends Controller
                     "category" => "كباب"
                 ],
                 "tr" => [
-                    "title" => "Shishlik",
-                    "desc" => "6 parça kuzu bonfile, 450 gram",
+                    "title" => "Pirzola Kebab",
+                    "desc" => "Kuzu Pirzola 6 Parça",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715688043-kabab-shishlik.png",
                     "category" => "Şişler"
                 ]
@@ -1031,7 +1031,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Kebab Barg",
-                    "desc" => "240 gram kuzu bonfile",
+                    "desc" => "Kuzu kaski (240g)",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715688088-kabab-barg.png",
                     "category" => "Şişler"
                 ]
@@ -1058,7 +1058,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Bakhtiari Kebab",
-                    "desc" => "160 gram kuzu bonfile ve 14 gram tavuk göğsü",
+                    "desc" => "Kuzu bonfile (140g) , Tavuk Göğsü (160g) ve ızgara biber",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715688130-kabab-bakhtiari.png",
                     "category" => "Şişler"
                 ]
@@ -1084,7 +1084,7 @@ class MenuController extends Controller
                 ],
                 "tr" => [
                     "title" => "Chenje Kebab",
-                    "desc" => "300 gram kuzu bonfile",
+                    "desc" => "Kuzu Bonfile (300g) Şaşlık",
                     "img" => "https://app.ariyarestoran.com/storage//tickets/1715688174-kabab-chenje.png",
                     "category" => "Şişler"
                 ]
@@ -1093,25 +1093,25 @@ class MenuController extends Controller
             "fa" => [
                 "title" => "اکبر جوجه",
                 "desc" => "جوجه کوچک یک کیلویی، رب انار، کره",
-                "img" => "",
+                "img" => "https://app.ariyarestoran.com/storage//tickets/1716108211-akbar-oje.png",
                 "category" => "کباب ها"
             ],
             "en" => [
                 "title" => "Akbar Joje",
                 "desc" => "Small chicken, pomegranate sauce, butter",
-                "img" => "",
+                "img" => "https://app.ariyarestoran.com/storage//tickets/1716108211-akbar-oje.png",
                 "category" => "Kebabs"
             ],
             "ar" => [
                 "title" => "Akbar Joje",
                 "desc" => " دجاجة صغيرة، صلصة الرمان، زبدة",
-                "img" => "",
+                "img" => "https://app.ariyarestoran.com/storage//tickets/1716108211-akbar-oje.png",
                 "category" => "كباب"
             ],
             "tr" => [
                 "title" => "Akbar Joje",
                 "desc" => " Küçük tavuk, nar sosu, tereyağı",
-                "img" => "",
+                "img" => "https://app.ariyarestoran.com/storage//tickets/1716108211-akbar-oje.png",
                 "category" => "Şişler"
             ]
         ]
