@@ -22,35 +22,5 @@ use Laravel\Passport\Passport;
 |
 */
 
-//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
-//Passport::routes();
 
-Route::prefix('v1/')->namespace('api/v1/')->group(function () {
-    Route::get('articles', [ArticlesController::class, 'index']);
-    Route::get('article-show/{slug}', [ArticlesController::class, 'show']);
-    Route::get('article-old-show/{slug}', [ArticlesController::class, 'showOld']);
-    Route::get('article-future', [ArticlesController::class, 'future']);
-    Route::get('article-most-view', [ArticlesController::class, 'mostView']);
-    Route::get('sitemap', [SitemapController::class, 'index']);
-    Route::get('robot', [SitemapController::class, 'robot']);
-    Route::get('sliders', [SlidersController::class, 'index']);
-    Route::get('gallery', [GaleryController::class, 'index']);
-    Route::get('menu', [MenuController::class, 'index']);
-    Route::post('/login', [AuthController::class, 'login']);
-    Route::post('/oauth/token', '\Laravel\Passport\Http\Controllers\AccessTokenController@issueToken');
 
-    Route::middleware('auth:api')->group(function () {
-        Route::post('article-create', [ArticlesController::class, 'add']);
-        Route::post('gallery-create', [GaleryController::class, 'add']);
-        Route::post('sliders-update', [SlidersController::class, 'update']);
-        Route::post('sliders-create', [SlidersController::class, 'add']);
-        Route::post('gallery-update', [GaleryController::class, 'update']);
-        Route::post('gallery-delete', [GaleryController::class, 'delete_from']);
-        Route::post('sliders-delete', [SlidersController::class, 'delete_from']);
-        Route::post('article-file', [ArticlesController::class, 'fileUpdload']);
-        Route::post('article-update', [ArticlesController::class, 'update']);
-        Route::post('article-delete', [ArticlesController::class, 'delete_from']);
-    });
-});

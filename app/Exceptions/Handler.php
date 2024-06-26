@@ -25,19 +25,6 @@ class Handler extends ExceptionHandler
      */
     public function register(): void
     {
-        $this->renderable(function (ThrottleRequestsException $e) {
-            return response()->json([
-                'status' => 404,
-                'errors' => $e->getCode(),
-                'message' => 'there_were_too_many_requests_Please_try_again_in_a_few_moments',
-            ], 404);
-        });
-        $this->renderable(function (ValidationException $e) {
-            return response()->json([
-                'status' => 422,
-                'errors' => $e->errors(),
-                'message' => $e->getMessage(),
-            ], 404);
-        });
+        //
     }
 }
